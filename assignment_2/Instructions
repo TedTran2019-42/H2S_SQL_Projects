@@ -1,0 +1,23 @@
+Instructions 
+-------------
+1. sh ./import_db.sh to initialize or reset the database
+2. Fill in the required SQL in the 'lib/movie_sql.rb' file.
+3. Use 'bundle exec rspec' to use the specs.
+4. Run "sqlite3" then insert your queries if you wish to test them manually.
+
+Suggested Workflow: 
+-------------------
+0. Unless you enjoy working with vim, I'd suggest working with your code editor of choice on the host computer then using 
+docker cp to put files into the container for testing. (This will be a massive pain and hassle, though. Learn how to use vim)
+Optional: How would you edit the Dockerfile to use your preferred text editor within the container? 
+1. Write the query on host computer 
+2. Transfer result into docker container 
+3. Test result 
+4. Rinse and repeat until all specs are green! 
+
+Notes
+-------
+1. The tables in this dataset come from a third party.
+2. Sqlite3 commands: .tables to view all tables, .schema to view the database schema 
+3. Make sure to terminate sqlite3 commands with semicolons, otherwise they don't execute.
+4. Helpful options for vim: :set number and :color on-- you should put these into a ~/.vimrc file. (~ in container is root)

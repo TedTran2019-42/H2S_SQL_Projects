@@ -1,0 +1,40 @@
+1. docker-machine create --driver=virtualbox ruby 
+2. docker-machine env ruby 
+3. eval $(docker-machine env ruby)
+4. cd into ruby_env folder -> docker build -t ruby . 
+5. docker run -it ruby sh
+
+Running sqlite3?
+-----------------
+6. You're all set! Go into the assignment folders and following the instructions to begin working.
+
+Running postgresql? (Planned future assignments will utilize psql instead of sqlite)
+-------------------
+6. Open another terminal -> docker run --rm --name pg-docker -e -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
+7. Switch to container running Ruby dev environment -> service postgresql start (use restart if you ever need to reset)
+8. sudo -u postgres psql postgres
+9. \password postgres -> \q to exit out back into Debian CLI
+10. psql -h localhost -U postgres -d postgres -> If it puts you into postgres=#, it's working properly.
+
+# Errors 
+1. "Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"? 
+   a. docker-machine env ruby -> eval $(docker-machine env ruby)
+2. "psql: could not connect to server: Connection refused"
+   a. service postgresql start 
+
+Work from Docker container to host computer and vice versa
+---------------------------------------------------------------
+docker cp src/. mycontainer:/target -> Example: docker cp transfer_1/. 3cce7e573e20:app/assignment_1/lib/.  
+docker cp mycontainer:/src/. target -> Example: docker cp 3cce7e573e20:app/assignment_1/lib/. transfer_1
+Remember that mycontainer = container_id
+This will all be done on the host computer terminal-- make sure to be in the right directory since these aren't absolute paths.
+
+Bonus! Clean up your docker containers, images, and machine once you're done! 
+-------------------------------------------------------------------------------
+1. docker-machine rm [name]
+2. docker rmi $(docker images --all --quiet)
+3. docker rm -f $(docker ps -a -q)
+
+# Additional: 
+# vim ../etc/postgresql/9.6/main/pg_hba.conf
+# vim ../etc/postgresql/9.6/main/postgresql.conf
