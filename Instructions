@@ -4,17 +4,20 @@
 4. cd into ruby_env folder -> docker build -t ruby . 
 5. docker run -it ruby sh
 
-Running sqlite3?
+Running sqlite3? (Assignment_1, Assignment_2)
 -----------------
 6. You're all set! Go into the assignment folders and following the instructions to begin working.
 
-Running postgresql? (Planned future assignments will utilize psql instead of sqlite)
+Running postgresql? (SqlZoo)
 -------------------
 6. Open another terminal -> docker run --rm --name pg-docker -e -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
 7. Switch to container running Ruby dev environment -> service postgresql start (use restart if you ever need to reset)
-8. sudo -u postgres psql postgres
-9. \password postgres -> \q to exit out back into Debian CLI
-10. psql -h localhost -U postgres -d postgres -> If it puts you into postgres=#, it's working properly.
+8. sudo su postgres -> Terminal should have something like: postgres@518d0e0c0e52:/app$
+9. createuser root -s 
+10. psql template1 
+11. \password -> Enter PW -> Exit using \q 
+12. Exit out of postgres@518d0e0c0e52:/app$ into # 
+13. You're all set! Follow instructions and begin working.
 
 # Errors 
 1. "Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"? 

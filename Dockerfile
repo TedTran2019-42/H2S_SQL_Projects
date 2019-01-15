@@ -23,6 +23,7 @@ COPY ./Gemfile /app/Gemfile
 COPY ./Gemfile.lock /app/Gemfile.lock
 COPY ./assignment_1 /app/assignment_1
 COPY ./assignment_2 /app/assignment_2
+COPY ./sql_zoo /app/sql_zoo
 
 # Set the working directory for all following commands
 WORKDIR /app
