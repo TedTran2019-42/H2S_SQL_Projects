@@ -29,7 +29,7 @@ Work from Docker container to host computer and vice versa
 ---------------------------------------------------------------
 docker cp src/. mycontainer:/target -> Example: docker cp transfer_1/. 3cce7e573e20:app/assignment_1/lib/.  
 docker cp mycontainer:/src/. target -> Example: docker cp 3cce7e573e20:app/assignment_1/lib/. transfer_1
-Remember that mycontainer = container_id
+Remember that mycontainer = container_id (docker container ls to get the container ID)
 This will all be done on the host computer terminal-- make sure to be in the right directory since these aren't absolute paths.
 
 Bonus! Clean up your docker containers, images, and machine once you're done! 
