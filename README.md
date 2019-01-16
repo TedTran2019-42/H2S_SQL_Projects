@@ -6,4 +6,4 @@ Projects to learn SQL I've written for H2S students circa January 2019
 2. Wrote PDF to guide student's learning 
 3. Added many challenges to solve and corresponding RSpec tests in addition to base. 
 
-Databases and some queries/tests are taken from outside sources: SqlZoo https://sqlzoo.net/ and other sources.
+Databases and some queries/tests are taken from outside sources: SqlZoo https://sqlzoo.net/, https://www.appacademy.io/, and other sources.
