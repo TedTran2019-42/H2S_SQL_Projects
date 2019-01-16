@@ -4,7 +4,7 @@
 4. cd into ruby_env folder -> docker build -t ruby . 
 5. docker run -it ruby sh
 
-Running sqlite3? (Assignment_1, Assignment_2)
+Running sqlite3? (Assignment_1, Assignment_2, Assignment_3)
 -----------------
 6. You're all set! Go into the assignment folders and following the instructions to begin working.
 
