@@ -1,5 +1,5 @@
 require 'rspec'
-require '07_joins_exercises'
+require '07_joins'
 
 describe "JOIN exercises" do
   describe "ford_films" do

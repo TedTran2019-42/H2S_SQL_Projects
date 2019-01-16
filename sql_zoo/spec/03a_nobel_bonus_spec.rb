@@ -1,5 +1,5 @@
 require 'rspec'
-require '03a_nobel_bonus'
+require '03a_select'
 
 describe 'nobel bonus problems' do
   describe 'physics_no_chemistry' do

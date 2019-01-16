@@ -1,5 +1,5 @@
 require 'rspec'
-require '06_joins_warmup'
+require '06_joins'
 
 describe "JOIN warmup" do
   describe "films_from_sixty_two" do

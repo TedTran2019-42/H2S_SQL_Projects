@@ -1,5 +1,5 @@
 require 'rspec'
-require '04_select_within_select'
+require '04_subquery'
 
 describe "SELECT within SELECT" do
   describe "larger_than_russia" do

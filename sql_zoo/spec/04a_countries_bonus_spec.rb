@@ -1,5 +1,5 @@
 require 'rspec'
-require '04a_countries_bonus'
+require '05a_aggregates'
 
 describe "countries bonus" do
   describe "highest_gdp" do

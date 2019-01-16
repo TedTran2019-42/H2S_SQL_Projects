@@ -1,5 +1,5 @@
 require 'rspec'
-require '02_select_countries'
+require '02_select'
 
 describe 'SELECT from world' do
   describe 'large_countries' do

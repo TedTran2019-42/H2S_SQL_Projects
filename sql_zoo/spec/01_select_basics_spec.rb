@@ -1,5 +1,5 @@
 require 'rspec'
-require '01_select_basics'
+require '01_select'
 
 describe 'SELECT basics' do
 

@@ -1,5 +1,5 @@
 require 'rspec'
-require '08_using_null.rb'
+require '08_null'
 
 describe "using NULL" do
   describe "null_dept" do
