@@ -47,7 +47,7 @@
 	But have no fear! \\ 
 
 	I wrote a \texttt{TON} of extra queries for you all to complete and have fun 
-	doing. And by fun, I mean as fun as falling into a gorilla closure at a 
+	doing. And by fun, I mean as fun as falling into a gorilla enclosure at a 
 	zoo. Prepare for a world of \texttt{hurt} due to one man's good intentions. \\
 
 	Good luck! \\
@@ -102,6 +102,9 @@
 	\end{itemize}
 
 
+	Testing is provided for you, so you only need to run a single command to 
+	check your answers! Go for the green, buddy. 
+
 %******************************************************************************%
 %                                                                              %
 %                                  Goals                                       %
@@ -109,13 +112,17 @@
 %******************************************************************************%
 \chapter{Goals}
 
-    This chapter introduces the pedagogical interests of your project,
-    because in the end, a project is only a mean to explore and
-    discover new topics. For instance our \texttt{42} \texttt{C++}
-    project \texttt{Nibbler}. Despite being just a simple
-    \texttt{Snake} game, this project introduces the students to the
-    creation of an API and some plugins for a \texttt{C++} program.
+	\begin{itemize}\itemsep1pt 
+		\item Learn best practices for writing SQL queries   
+		\item Learn SQL fundamentals to query the database for required information 
+		\item Create a wrapper using a programming language of your choice, so 
+			that a person can obtain information from the database without 
+			having to write SQL queries themselves.
+	\end{itemize}
 
+	Your goal is to pass every single test for a beautiful 100 percent GREEN. Then 
+	after that, use what you've learned at H2S to create an interface for users 
+	to get what they want from the DB without writing SQL themselves. 
 
 %******************************************************************************%
 %                                                                              %
@@ -124,49 +131,208 @@
 %******************************************************************************%
 \chapter{General instructions}
 
-    This chapter lists all basic instructions of a project.
-    Language, restrictions, permissions, compilation, etc.
-
+	\begin{itemize}\itemsep1pt 
+		\item This project will be corrected by humans only. 
+			You're allowed to organize and name your files as you see 
+			fit, but you must follow the following rules. 
+		\item The first rule of SQL Club is: You do not talk about SQL Club.
+		\item The second rule of SQL Club is: You do not talk about SQL Club.
+		\item I was going to copy the third rule from the 42 PDF, "You are never allowed 
+			to submit code you did not write yourself" but that'd make me a hypocrite. 
+			Go wild!
+		\item Within the mandatory part, you are only allowed to use SQL. 
+		\item You can ask your questions on slack and random people in your nearby vicinity 
+			that appear to be older than you. Of course, with the exception being me-- don't ask me 
+			any questions. Everybody at 42 is a SQL master, and H2S mentors are required 
+			to have a PhD in Structured Query Language studies! So don't be afraid to 
+			come to them for guidance.
+		\item You will be provided with instructions on how to setup your programming environment, create the DB 
+			and import data, a skeleton to code in, and a full testing suite to check your answers.
+	\end{itemize}
 
 % Don't forget this line for piscine days to initate the exercise counter at 0
 \startexercices
 
 %******************************************************************************%
 %                                                                              %
-%                             Day of the Piscine                               %
+%                             THE SQL PISCINE LOL                              %
 %                                                                              %
 %******************************************************************************%
 
-\chapter{Exercise \exercicenumber: A Day of the Piscine}
+\chapter{Day \exercicenumber: Beginning your SQL studies! }
 
-\extitle{Title}
-\exnumber{\exercicenumber}
-\exfiles{expected\_file.py}
-\exforbidden{Forbidden functions}
-\exnotes{Notes}
-
+\extitle{SQL SELECT/FROM/WHERE, operators, DISTINCT, expression aliases, *}
+\exfiles{01\_select.rb, 02\_select.rb, 03\_select.rb, 03a\_select.rb}
+\exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
 
-    This is an example of how to format the headings on a piscine-style multi part
-    challenge.
+	Look at this example! \\
+    
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{operators.png}
+                \end{center}
+            \end{figure}
+
+	\begin{itemize}\itemsep1pt 
+		\item SELECT chooses which columns to grab 
+		\item FROM chooses which table to start from
+		\item DISTINCT means you want this to be unique! No duplicates 
+		\item * basically means that  you'll grab ALL. 
+		\item You can aliases expressions or tables using "AS", this keeps your SQL code DRY. 
+		\item WHERE is used to filter records by condition! 
+		\item Now, what are some useful operators you can use in the WHERE clause?  
+	\end{itemize}
+
+    
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{operators.png}
+                \end{center}
+            \end{figure}
+
+    
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{operators2.png}
+                \end{center}
+            \end{figure}
+
+	Screenshots taken from SQLBolt! 
+	
+
 
 % Don't forget this line in order to increment the exercise counter
 \nextexercice
 
 %******************************************************************************%
 %                                                                              %
-%                             Mandatory part                                   %
+%                             THE SQL PISCINE LOL                              %
 %                                                                              %
 %******************************************************************************%
-\chapter{Mandatory part}
 
-    Heart of the subject, the mandatory part describes in details the
-    work expected and the possible tools and/or technologies
-    required. The secret of a good subject is the balance between
-    being specific and leaving a part to the interpretation and
-    imagination. This balance is very important as it is the engine
-    that fuels debates and argumentations during peer-evaluation.
+\chapter{Day \exercicenumber: SLOWLY BECOMIN' POWERFUL IN SQL }
+\extitle{SQL subqueries, GROUP BY, aggregate functions, HAVING}
+\exfiles{04\_subquery.rb, 05\_aggregates.rb, 05a\_aggregates.rb}
+\exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
+\makeheaderfiles
 
+	Look at this example! \\
+    
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{operators.png}
+                \end{center}
+            \end{figure}
+
+	\begin{itemize}\itemsep1pt 
+		\item Subqueries are easy, aren't they? It's just a query inside of another query! 
+			However, think about the type of subquery: is it correlated? A correlated 
+			subquery is where the subquery is dependent on a column from the outer query, 
+			meaning it runs repeatedly. 
+		\item GROUP BY groups the same column results together, allowing you to use aggregate functions. 
+			What happens when you use GROUP BY on more than one column? 
+		\item HAVING is just like WHERE, but it happens after the GROUP BY rather than before. 
+			We'll get to SQL's logical order 
+			later, for now-- just know that SQL's syntactical order isn't its logical order. 
+		\item Aggregate functions are helpful functions you can use on groups! What are some of the most 
+			commonly used ones?
+	\end{itemize}
+
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{aggregate_functions.png}
+                \end{center}
+            \end{figure}
+
+	   Another chart from SQLBolt!
+
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                             THE SQL PISCINE LOL                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Day \exercicenumber: YOUR POWER LEVEL IS RISING. }
+
+\extitle{SQL JOINS, ORDER BY, LIMIT, join tables, primary key, foreign key, DB schema}
+\exfiles{06\_joins.rb, 07\_joins.rb, 07a\_joins.rb}
+\exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
+\makeheaderfiles
+
+
+	Look at this example! \\
+    
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{operators.png}
+                \end{center}
+            \end{figure}
+
+	\begin{itemize}\itemsep1pt 
+		\item What does a JOINS do? It combines rows from two or more tables together! 
+		\item ORDER BY orders your results based on some specific column, with options ASC or DESC
+		\item LIMIT simply limits the amount of results you'll get back to a certain number
+		\item A schema is basically just a view of the entire database 
+		\item Primary keys are used to uniquely identify each row in the table. 
+		\item Foreign keys are used to join two tables together!
+		\item If an employees table has a boss\_id foreign key, employees will belong to boss while boss will have 
+			many employees. 
+		\item A join table is needed to deal with a many-to-many relationship! Think about it for a lil' bit. 
+			Why is a join table needed? 
+	\end{itemize}
+
+	Rather than posting an image of what happens on a regular join, here is a link to a \href{https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/}{visual representation 
+	of SQL joins}.
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
+
+%******************************************************************************%
+%                                                                              %
+%                             THE SQL PISCINE LOL                              %
+%                                                                              %
+%******************************************************************************%
+
+\chapter{Day \exercicenumber: AND THIS IS TO GO FURTHER BEYOND }
+
+\extitle{SQL IS NULL/NOT NULL, OUTER JOINS, COALESCE, CASE, self joins, ternary logic}
+\exfiles{08\_null.rb, 09\_self\_joins.rb, wrapper program}
+\exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
+\makeheaderfiles
+
+	Look at this example! \\
+    
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=14cm]{operators.png}
+                \end{center}
+            \end{figure}
+
+	\begin{itemize}\itemsep1pt 
+		\item Why do you have to use IS NULL/IS NOT NULL instead of just = or != NULL? 
+			Recall that NULL is unknown, so if you compare NULL = NULL, you get false 
+			since they're both unknown. 
+		\item Outer joins! Look above to the visual representation of SQL joins. Think about 
+			why outer joins can result in NULLs. 
+		\item CASE statement is self explanatory
+		\item COALESCE is used to fill out NULL values with default ones!   
+		\item In what cases would you use self joins and why?  
+		\item What is SQL's ternary logic? -> True, false, null
+	\end{itemize}
+
+	Look at this example of a basic wrapper program! \\ 
+
+	\begin{figure}[H]
+		\begin{center}
+			\includegraphics[width=14cm]{operators.png}
+		\end{center}
+	\end{figure}
+
+% Don't forget this line in order to increment the exercise counter
+\nextexercice
 
 
 %******************************************************************************%
@@ -176,12 +342,18 @@
 %******************************************************************************%
 \chapter{Bonus part}
 
-    When a student invests time in a project and the goals are met,
-    it's innate to will to go further ! The bonus section is here to satisfy
-    such ambition. Of course, the bonus part is exclusively available
-    if and only if the mandatory part is complete and perfect.
+	Whoa, I can't believe you actually finished everything. You cheated, didn't you?! 
+	Well, whatever. Now, it's time for bonuses! Well, there's really only one 
+	plausible bonus for this project, so let's get right to it. \\ 
 
+	Your bonus will be creating 10 additional queries for information you want 
+	to get from the database! Write these 10 queries in a separate file, 
+	then make a skeleton and spec file for said queries. After that, challenge 
+	your peers to solve said queries! You will get the bonus points provided 
+	none of your peers can solve all 10 queries that you've created. \\ 
 
+	If your material is good, it'll be added to the curriculum to make the 
+	next gen of H2S SQL students suffer! 
 
 %******************************************************************************%
 %                                                                              %
@@ -189,16 +361,40 @@
 %                                                                              %
 %******************************************************************************%
 \chapter{Turn-in and peer-evaluation}
-
-    This part describes the conditions and instructions regarding the turn-in and
-    the peer-evaluation of the project. If your project does not
-    require odd turn-in or peer-evaluation instructions, feel free to
-    use the following paragraph as it is:\\
-
     Turn your work in using your \texttt{GiT} repository, as
-    usual. Only work present on your repository will be graded in defense.
+    usual. Only work present on your repository will be graded in defense. \\
+	
+	Remember to store all your work on a git repository-- make sure to add, commit, then push! \\ 
 
+    Good luck and don't forget to "cd (where you stored your work) \&\& rm -rf *" once you're done.
 
+    . \\
+
+    . \\
+
+    . \\ 
+
+    . \\ 
+
+    . \\ 
+
+    . \\
+
+    . \\
+
+    . \\
+
+    . \\
+    
+    . \\
+
+    . \\
+    
+    . \\
+
+    . \\
+
+    If you've actually followed instructions and stored your work, you'll be fine.
 
 %******************************************************************************%
 \end{document}
