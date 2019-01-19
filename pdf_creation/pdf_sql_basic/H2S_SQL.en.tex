@@ -170,7 +170,7 @@
     
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width=14cm]{operators.png}
+                    \includegraphics[width=14cm]{Ex00.png}
                 \end{center}
             \end{figure}
 
@@ -216,12 +216,10 @@
 \exfiles{04\_subquery.rb, 05\_aggregates.rb, 05a\_aggregates.rb}
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
-
-	Look at this example! \\
-    
+ 
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width=14cm]{operators.png}
+                    \includegraphics[width=10cm]{subquery.png}
                 \end{center}
             \end{figure}
 
@@ -237,6 +235,9 @@
 			later, for now-- just know that SQL's syntactical order isn't its logical order. 
 		\item Aggregate functions are helpful functions you can use on groups! What are some of the most 
 			commonly used ones?
+		\item If you look carefully, the text says "Find the years in which there were more than 10 movies", 
+			but I only put HAVING num\_movies = 10. This error was merely a test to see your 
+			level of astuteness. 
 	\end{itemize}
 
             \begin{figure}[H]
@@ -263,12 +264,9 @@
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
 
-
-	Look at this example! \\
-    
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width=14cm]{operators.png}
+                    \includegraphics[width=13cm]{join.png}
                 \end{center}
             \end{figure}
 
@@ -303,11 +301,9 @@
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
 
-	Look at this example! \\
-    
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width=14cm]{operators.png}
+                    \includegraphics[width=9cm]{null.png}
                 \end{center}
             \end{figure}
 
@@ -324,10 +320,13 @@
 	\end{itemize}
 
 	Look at this example of a basic wrapper program! \\ 
+	This is pretty poor, though. I had to use the main Object to get all the methods! 
+	I'd say when you create your own DB, you should wrap up all your methods into some 
+	sort of object. \\ 
 
 	\begin{figure}[H]
 		\begin{center}
-			\includegraphics[width=14cm]{operators.png}
+			\includegraphics[width=15cm]{wrapper.png}
 		\end{center}
 	\end{figure}
 
