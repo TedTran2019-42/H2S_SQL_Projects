@@ -1,0 +1,332 @@
+# **************************************************************************** #
+#                                                                              #
+#               YOUR_PROJECT_NAME.fr.yml for YOUR_PROJECT_NAME                 #
+#               Created on : Mon Oct  5 18:10:13 2015                          #
+#               Made by : David "Thor" GIRON <thor@staff.42.fr>                #
+#                                                                              #
+# **************************************************************************** #
+
+# **************************************************************************** #
+#                                                                              #
+#    Grading scales used during peer-evaluations at 42 are formatted as        #
+#  YAML files. Those files will then be uploaded by the pedago team on the     #
+#  school's intranet in order to generate the web form students will use       #
+#  during peer-evaluations.                                                    #
+#                                                                              #
+#    This YAML template documents in detail the style and content of a         #
+#  grading scale. It makes an excellent starting point for you to create       #
+#  your own grading scale. Don't hesitate to remove comment-boxes you deem     #
+#  unnecessary for your final version.                                         #
+#                                                                              #
+#    A scale is made of a bloc header followed by one or more section-blocs.   #
+#  Each section-bloc is made of one or more question-blocs. This bloc system   #
+#  allows you to gather related questions into the same section.               #
+#                                                                              #
+#    In order to evaluate students skills, 42 has developed a "skills" system, #
+#  inspired by role-playing games. Each project is assigned between 2 and 4    #
+#  skills. As those skills increase for a successfully produced project, they  #
+#  will also increase the global skills level on the student's profile.        #
+#  Here's the complete skills list used at 42 :                                #
+#                                                                              #
+#  - Adaptation & creativity                                                   #
+#  - Algorithms & AI                                                           #
+#  - Company experience                                                        #
+#  - DB & Data                                                                 #
+#  - Functional programming                                                    #
+#  - Graphics                                                                  #
+#  - Group & interpersonal                                                     #
+#  - Imperative programming                                                    #
+#  - Network & system administration                                           #
+#  - Object-oriented programming                                               #
+#  - Organization                                                              #
+#  - Parallel computing                                                        #
+#  - Rigor                                                                     #
+#  - Security                                                                  #
+#  - Technology integration                                                    #
+#  - Unix                                                                      #
+#  - Web                                                                       #
+#                                                                              #
+#    EACH skill associated with the project is worth a total of 100 points,    #
+#  and NOT 100 points for the whole skill set. Each ensemble of 100 points     #
+#  will be spread out throughout the project. Let's check out an example.      #
+#  A project "Lube" could be associated with the following skills :            #
+#  "Group & interpersonal" (100pts), "Rigor" (100pts) and "Web" (100pts).      #
+#                                                                              #
+#                     FIX ME                                                   #
+#                                                                              #
+# **************************************************************************** #
+
+---
+# **************************************************************************** #
+#                                                                              #
+#                  Grading scale for project <project name>                    #
+#                                  Header                                      #
+#                                                                              #
+# **************************************************************************** #
+# **************************************************************************** #
+# The 'name' entry:                                                            #
+#   This entry indicates the name of the project associated to this            #
+#   grading scale.                                                             #
+#   This name will also be used as a title for the generated form.             #
+# **************************************************************************** #
+name: H2S_SQL Basics
+
+
+# **************************************************************************** #
+# The 'lg' entry:                                                              #
+#  Corresponds to the scale language. The scale must be in the language used   #
+#  for the subject.                                                            #
+# **************************************************************************** #
+lg: en
+
+
+# **************************************************************************** #
+# The 'is_primary' entry:                                                      #
+#   If a project has more than one scale, this entry allows you to choose      #
+#   the active scale. This entry is therefore reserved to the school's pedago  #
+#   team and its value must remain "true".                                     #
+# **************************************************************************** #
+is_primary: true
+
+
+# **************************************************************************** #
+# The 'comment' entry:                                                         #
+#   This grading-scale entry won't be displayed on the generated web-form.     #
+#   Its only purpose is to add comments on the scale's content. You may leave  #
+#   this entry empty if no comment is necessary concerning this scale.         #
+# **************************************************************************** #
+comment: ''
+
+
+# **************************************************************************** #
+# The 'introduction_md' entry:                                                 #
+#   This entry is your grading-scale's introduction, which means it's the      #
+#   first thing students will read when starting their peer-evaluation         #
+#   session. Here you should summarise the project's purpose and aim, as       #
+#   well as the rules of etiquette to follow to insure things go smoothly      #
+#   during the peer-evaluation session.                                        #
+#   The current rules used by default at the school are listed in the          #
+#   template bellow. You should keep them as they are (unless absolutely       #
+#   necessary).                                                                #
+# **************************************************************************** #
+introduction_md: |
+
+  To ensure this evaluation goes smoothly, please respect the following set
+  of rules :
+
+  - Please remain courteous, polite, respectful and constructive at all 
+    times during this exchange. The trust bond between the school's 
+    communauty and yourself depends on it.
+
+  - Should you notice any malfunctions within the submitted project, 
+    make sure you take the time to discuss those with the student (or 
+    group of students) being graded.
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading 
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+
+# **************************************************************************** #
+# The 'disclamer_md' entry:                                                    #
+#   This entry's sole purpose is to inform wether this project contains        #
+#   sensitive or secret material.                                              #
+#   In the particular case where you've partnered up with a company for this   #
+#   project, you may use this entry summon up the context of this partnership. #
+#   Write a few words about the company and explain your expectations and      #
+#   goals.                                                                     #
+#   In any other case, please leave this entry empty.                          #
+# **************************************************************************** #
+disclaimer_md: ''
+
+
+# **************************************************************************** #
+# The 'guidelines_md' entry:                                                   #
+#   This entry explains the general technical rules for the evaluation to      #
+#   run smoothly. Should you have special submission guidlines explicitely     #
+#   expressed in this project's subject, summon them up here.                  #
+#   In any other case, please leave this entry as it is.                       #
+# **************************************************************************** #
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of 
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - Make sure no mischievous aliases have been used to trick you 
+    into correcting something that is not actually in the official
+    submitted directory.
+
+  - Any script created to make this evaluation session easier - whether
+    it was produced by you or the student being graded - must be  
+    checked rigorously in order to avoid bad surprises.
+
+  - If the student who is grading this project hasn't done the
+    project him/herself yet, he/she must read the whole topic 
+    before starting the evaluation session.
+
+  - Use the flags available to you on this scale in order to report
+    a submission directory that is empty, non-functional, that contains
+    a norm errors or a case of cheating, etc...
+    In this case, the evaluation session ends and the final grade is 0
+    (or -42, in case of cheating). However, unless the student has
+    cheated, we advise you to go through the project together in order 
+    for the two (or more) of you to identify the problems that may have 
+    led for this project to fail, and avoid repeating those mistakes for
+    future projects.
+
+
+# **************************************************************************** #
+# The 'correction_number' entry:                                               #
+#   This entry allows us to change the number of peer-evaluations a project    #
+#   will require before the final grade can be calculated by the intranet.     #
+#   This value is solely meant to be modified by members of the pedago team.   #
+# **************************************************************************** #
+# DB and Data
+correction_number: 2
+
+# **************************************************************************** #
+# The 'correction_number' entry:                                               #
+#   This entry allows us to control the time span of an evaluation session.    #
+#   This value is solely meant to be modified by members of the pedago team.   #
+# **************************************************************************** #
+duration: 1
+
+
+
+# **************************************************************************** #
+
+
+
+# **************************************************************************** #
+#                                                                              #
+#                  Grading scale for project <project name>                    #
+#                                   Sections                                   #
+#                                                                              #
+# **************************************************************************** #
+# **************************************************************************** #
+# The 'sections' entry:                                                        #
+#  This entry indicates the start of the sections list for this grading-scale. #
+#  No modifications necessary here. Leave as it is.                            #
+# **************************************************************************** #
+sections:
+
+
+# **************************************************************************** #
+#                 Section 1: <Title for section 1 of the scale>                #
+# **************************************************************************** #
+- name: Overall Structure and RSpec
+  position: 1
+  description: 'Structure and RSpec files'
+
+  questions:
+
+  - name: Folders
+
+    position: 1
+    guidelines: | 
+            Does the student have two separate folders? One for RSpec 
+            testing and the other for the wrapper program  
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 90
+      name: Organization
+
+  - name: RSpec 
+    position: 2 
+    guidelines: | 
+            Did the student tamper with the RSpec files to pass the tests? 
+            Clever, but consider this an instant fail. 
+    rating: bool 
+    kind: standard
+    question_skills:
+    - percentage: 10 
+      name: Organization
+
+
+- name: SQL
+  position: 2
+  description: 'Learning basic SQL'
+  
+  questions:
+
+
+  - name: Day00! 
+    guidelines: |
+
+        You are allowed to fail (2) RSpec tests at most. Did they pass the 
+        vast majority of tests?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 25
+      name: DB and Data
+
+  - name: Day01! 
+    guidelines: |
+
+        You are allowed to fail (2) RSpec tests at most. Did they pass the 
+        vast majority of tests?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 25
+      name: DB and Data
+
+  - name: Day02! 
+    guidelines: |
+
+        You are allowed to fail (2) RSpec tests at most. Did they pass the 
+        vast majority of tests?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 25
+      name: DB and Data
+
+  - name: Day03! 
+    guidelines: |
+
+        You are allowed to fail (2) RSpec tests at most. Did they pass the 
+        vast majority of tests? Did they create a working wrapper program?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 25
+      name: DB and Data
+
+
+- name: Bonus
+  description: 'Bonus part!'
+
+
+  questions:
+
+
+  - name: Writing additional queries along w/ solutions and working tests 
+    guidelines: |
+        Did they write query questions, solutions to said questions, and working tests 
+        to check their solutions? 10 is required for full credit!  
+      
+
+    rating: bool
+    kind: bonus
+    questions_skills:
+    - percentage: 25
+      name: Database and Data
+      ...
+    - percentage: 125
+      name: Rigor
+

@@ -4,11 +4,11 @@
 4. cd into ruby_env folder -> docker build -t ruby . 
 5. docker run -it ruby sh
 
-Running sqlite3? (Assignment_1, Assignment_2, Assignment_3)
+Running sqlite3? (Assignment_1, Assignment_2, Assignment_3) -> PDF_2 -> SQL_INTERMEDIATE
 -----------------
 6. You're all set! Go into the assignment folders and following the instructions to begin working.
 
-Running postgresql? (SqlZoo)
+Running postgresql? (SqlZoo) -> PDF_1 -> SQL_BASIC
 -------------------
 6. Open another terminal -> docker run --rm --name pg-docker -e -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres
 7. Switch to container running Ruby dev environment -> service postgresql start (use restart if you ever need to reset)

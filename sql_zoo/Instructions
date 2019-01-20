@@ -15,6 +15,12 @@ Optional: How would you edit the Dockerfile to use your preferred text editor wi
 3. Test result 
 4. Rinse and repeat until all specs are green! 
 
+Additional instructions once you've decided to move onto the wrapper program 
+------------------------------------------------------------------------------
+1. Copy everything in /lib/ over to another directory and work in that one instead. Keep the directory w/ working RSpec tests 
+and directory where you've made the wrapper program separate. Since the wrapper program will utilize all the files 
+you've worked on, make a COPY of everything in the /lib/ folder!!!  
+
 Notes
 -------
 1. The tables in this dataset come from a third party.
