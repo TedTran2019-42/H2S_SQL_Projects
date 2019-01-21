@@ -143,46 +143,36 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
 %                                                                              %
 %******************************************************************************%
 
-\chapter{Day \exercicenumber: Beginning your SQL studies! }
+\chapter{Day \exercicenumber: We meet again, young one }
 
-\extitle{SQL SELECT/FROM/WHERE, operators, DISTINCT, expression aliases, *}
-\exfiles{01\_select.rb, 02\_select.rb, 03\_select.rb, 03a\_select.rb}
+\extitle{SQL Logical Order, .schema/.table, DB basics}
+\exfiles{movie\_sql.rb}
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
 
-	Look at this example! \\
-    
-            \begin{figure}[H]
-                \begin{center}
-                    \includegraphics[width=14cm]{Ex00.png}
-                \end{center}
-            \end{figure}
+	In case you're wondering... you'll be doing Assignment 1 on day00, Assignment 2 on day01, Assignment 3 on 
+	day 02, then there's no Assignment 4 because 4 is a really unlucky number. You got lucky there, kiddo. 
+	Notice how both PDFs end on day03? \\
 
 	\begin{itemize}\itemsep1pt 
-		\item SELECT chooses which columns to grab 
-		\item FROM chooses which table to start from
-		\item DISTINCT means you want this to be unique! No duplicates 
-		\item * basically means that  you'll grab ALL. 
-		\item You can aliases expressions or tables using "AS", this keeps your SQL code DRY. 
-		\item WHERE is used to filter records by condition! 
-		\item Now, what are some useful operators you can use in the WHERE clause?  
+			\item	Read this! \href{https://blog.jooq.org/2016/12/09/a-beginners-guide-to-the-true-order-of-sql-operations/}{SQL logical order isn't the same as its syntactic order!}
+		\item Look over the import\_db.sh script and the import\_db.sql to see how to create, delete, and import 
+			databases in SQLite3.
+		\item Creating and deleting databases in SQLite is different from PSQL-- why is this? Hint: 
+			it's because SQLite has an embedded database-- the database is simply a normal file within 
+			the computer's file system. 
+		\item What if you want to view the database schema without looking at the import\_db.sql file? Look at the 
+			example below!
+
 	\end{itemize}
-
-    
+ 
             \begin{figure}[H]
                 \begin{center}
-                    \includegraphics[width=14cm]{operators.png}
+                    \includegraphics[width=14cm]{schema.png}
                 \end{center}
             \end{figure}
 
-    
-            \begin{figure}[H]
-                \begin{center}
-                    \includegraphics[width=14cm]{operators2.png}
-                \end{center}
-            \end{figure}
-
-	Screenshots taken from SQLBolt! 
+	Eh. When writing queries in SQLite3, end them with ";" or they won't work. Use ".q" to exit out! \\ 
 	
 
 
@@ -195,33 +185,18 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
 %                                                                              %
 %******************************************************************************%
 
-\chapter{Day \exercicenumber: SLOWLY BECOMIN' POWERFUL IN SQL }
-\extitle{SQL subqueries, GROUP BY, aggregate functions, HAVING}
-\exfiles{04\_subquery.rb, 05\_aggregates.rb, 05a\_aggregates.rb}
+\chapter{Day \exercicenumber: Damn, you're getting old }
+\extitle{Pagination, subqueries into joins, and insert/update/delete}
+\exfiles{movie\_sql.rb}
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
- 
-            \begin{figure}[H]
-                \begin{center}
-                    \includegraphics[width=10cm]{subquery.png}
-                \end{center}
-            \end{figure}
 
-	\begin{itemize}\itemsep1pt 
-		\item Subqueries are easy, aren't they? It's just a query inside of another query! 
-			However, think about the type of subquery: is it correlated? A correlated 
-			subquery is where the subquery is dependent on a column from the outer query, 
-			meaning it runs repeatedly. 
-		\item GROUP BY groups the same column results together, allowing you to use aggregate functions. 
-			What happens when you use GROUP BY on more than one column? 
-		\item HAVING is just like WHERE, but it happens after the GROUP BY rather than before. 
-			We'll get to SQL's logical order 
-			later, for now-- just know that SQL's syntactical order isn't its logical order. 
-		\item Aggregate functions are helpful functions you can use on groups! What are some of the most 
-			commonly used ones?
-		\item If you look carefully, the text says "Find the years in which there were more than 10 movies", 
-			but I only put HAVING num\_movies = 10. This error was merely a test to see your 
-			level of astuteness. 
+	\begin{itemize}\itemsep1pt
+		\item What is pagination?! And why is keyset pagination almost always the better choice than offset pagination?
+			\href{http://allyouneedisbackend.com/blog/2017/09/24/the-sql-i-love-part-1-scanning-large-table/}{Here 				is a good ol' example of keyset pagination vs offset}
+		\item \href{https://academy.vertabelo.com/blog/converting-subqueries-joins/}{Converting subqueries to joins for better performance and cleaner code!}
+		\item Basically, you'll want to have joins replace correlated subqueries if possible. 
+		\item Look at the example below on how to insert, update, and delete rows in SQLite3! 
 	\end{itemize}
 
             \begin{figure}[H]
@@ -229,8 +204,6 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
                     \includegraphics[width=14cm]{aggregate_functions.png}
                 \end{center}
             \end{figure}
-
-	   Another chart from SQLBolt!
 
 % Don't forget this line in order to increment the exercise counter
 \nextexercice
@@ -241,10 +214,10 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
 %                                                                              %
 %******************************************************************************%
 
-\chapter{Day \exercicenumber: YOUR POWER LEVEL IS RISING. }
+\chapter{Day \exercicenumber: I miss the good old days... I remember when you were just a wee lad }
 
-\extitle{SQL JOINS, ORDER BY, LIMIT, join tables, primary key, foreign key, DB schema}
-\exfiles{06\_joins.rb, 07\_joins.rb, 07a\_joins.rb}
+\extitle{Union/Intersect/Except, indexing, sanitization, constraints, table altering}
+\exfiles{nonexistent\_sql.rb}
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
 
@@ -255,20 +228,17 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
             \end{figure}
 
 	\begin{itemize}\itemsep1pt 
-		\item What does a JOINS do? It combines rows from two or more tables together! 
-		\item ORDER BY orders your results based on some specific column, with options ASC or DESC
-		\item LIMIT simply limits the amount of results you'll get back to a certain number
-		\item A schema is basically just a view of the entire database 
-		\item Primary keys are used to uniquely identify each row in the table. 
-		\item Foreign keys are used to join two tables together!
-		\item If an employees table has a boss\_id foreign key, employees will belong to boss while boss will have 
-			many employees. 
-		\item A join table is needed to deal with a many-to-many relationship! Think about it for a lil' bit. 
-			Why is a join table needed? 
+		\item Above, example of Union/Intersect/Except with explanation of what's happening on each here 
+		\item After that, some information about indexing + sanitization + constraits here 
+		\item After that, an example below about how to alter a table in SQLITE3
 	\end{itemize}
 
-	Rather than posting an image of what happens on a regular join, here is a link to a \href{https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/}{visual representation 
-	of SQL joins}.
+            \begin{figure}[H]
+                \begin{center}
+                    \includegraphics[width=13cm]{join.png}
+                \end{center}
+            \end{figure}
+
 % Don't forget this line in order to increment the exercise counter
 \nextexercice
 
@@ -278,10 +248,9 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
 %                                                                              %
 %******************************************************************************%
 
-\chapter{Day \exercicenumber: AND THIS IS TO GO FURTHER BEYOND }
-
-\extitle{SQL IS NULL/NOT NULL, OUTER JOINS, COALESCE, CASE, self joins, ternary logic}
-\exfiles{08\_null.rb, 09\_self\_joins.rb, wrapper program}
+\chapter{Day \exercicenumber: This is the end, isn't it? Nobody lives forever }
+\extitle{DB creation!}
+\exfiles{The entire folder where you've stored your DB, SQL queries, wrapper program, data files, etc}
 \exnotes{Make sure to use docker cp to store your files on the host computer, then add it to a git repo after!}
 \makeheaderfiles
 
@@ -291,22 +260,13 @@ From \href{https://www.urbandictionary.com/define.php?term=Zoomer}{urbandictiona
                 \end{center}
             \end{figure}
 
-	\begin{itemize}\itemsep1pt 
-		\item Why do you have to use IS NULL/IS NOT NULL instead of just = or != NULL? 
-			Recall that NULL is unknown, so if you compare NULL = NULL, you get false 
-			since they're both unknown. 
-		\item Outer joins! Look above to the visual representation of SQL joins. Think about 
-			why outer joins can result in NULLs. 
-		\item CASE statement is self explanatory
-		\item COALESCE is used to fill out NULL values with default ones!   
-		\item In what cases would you use self joins and why?  
-		\item What is SQL's ternary logic? -> True, false, null
+	\begin{itemize}\itemsep1pt
+		\item	Further instructions on DB creation and clarification w/ images? -> They've had enough help!  
+		\item	Mention Parseltongue course! Ways to get data: webscraping, APIs, manually enter, randomly generate
+			Ex. of one of the methods used to get data in image below
+		\item	Mention ORM and ask why we go for higher levels of abstraction 
+		\item	Rec. to put everything in an object and have a consistent naming scheme. Ex. in image above
 	\end{itemize}
-
-	Look at this example of a basic wrapper program! \\ 
-	This is pretty poor, though. I had to use the main Object to get all the methods! 
-	I'd say when you create your own DB, you should wrap up all your methods into some 
-	sort of object. \\ 
 
 	\begin{figure}[H]
 		\begin{center}
